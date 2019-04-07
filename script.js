@@ -311,7 +311,7 @@ function autocomplete(inp, arr) {
         displayCalories = countries[ i ].calories
         displayCost = countries[ i ].cost
         let numCalories = parseInt( displayCalories )
-        let numCost = parseInt( displayCost.slice( 1 ) )
+        let numCost = parseFloat( displayCost.slice( 1 ) )
         totalCalories += numCalories
         totalCost += numCost
       }
