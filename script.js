@@ -310,7 +310,7 @@ function autocomplete(inp, arr) {
         displayName = countries[ i ].name
         displayCalories = countries[ i ].calories
         displayCost = countries[ i ].cost
-        totalCalories += totalCalories
+        totalCalories += displayCalories
         let dollarIndex = displayCost.indexOf( '$' )
         let isoCost = displayCost.splice( dollarIndex )
         totalCost += isoCost
