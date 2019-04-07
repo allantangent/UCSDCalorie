@@ -1,0 +1,10 @@
+body {
+	background-color: white;
+	font-family: Indie Flower, cursive;
+}
+p{
+		margin-left: auto;
+		margin-right: auto;
+		border = 0;
+		text-align: center;
+}
