@@ -43,7 +43,7 @@
 <tr>
 <td>
 <a class = "icons">
-<img style="display:block;width:100%;height:auto;"src = "res/menu.png" alt = "Menu"border = "0" onclick = "goBack()">
+<img style="display:block;width:100%;height:auto;" src = "res/menu.png" alt = "Menu" border = "0" onclick = "goBack()">
 </a> 
 <td>
 <a class = "icons">
@@ -55,7 +55,8 @@
 </table>
   <script>
     function goBack() {
-      window.history.back();
+      history.go( -1 )
+	  navigator.app.backHistory
     }
   </script>
 <br>
