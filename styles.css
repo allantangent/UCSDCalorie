@@ -2,12 +2,14 @@ body {
 	background-color: white;
 	font-family: Indie Flower, cursive;
 }
-p{
+table {
 		margin-left: auto;
 		margin-right: auto;
-		border = 0;
-		text-align: center;
+		border = 100px;
+		border-spacing: "0";
+		border-color: "blue";
+		max-width: 95%
 }
-a{
-		text-decoration: none;
+img {
+	max-width=100%;
 }
