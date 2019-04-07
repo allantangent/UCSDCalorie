@@ -311,7 +311,9 @@ function autocomplete(inp, arr) {
         displayCalories = countries[ i ].calories
         displayCost = countries[ i ].cost
         totalCalories += totalCalories
-        totalCost += displayCost
+        let dollarIndex = displayCost.indexOf( '$' )
+        let isoCost = displayCost.splice( dollarIndex )
+        totalCost += isoCost
       }
     }
     cell1.innerHTML = displayName;
