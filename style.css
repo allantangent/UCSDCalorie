@@ -76,3 +76,34 @@ input[type=text] {
   background-color: DodgerBlue !important; 
   color: #ffffff; 
 }
+
+#myTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 98%;
+}
+
+#myTable td, #myTable th {
+  padding: .1%;
+}
+
+#myTable tr:nth-child(even){background-color: #ff9966;}
+#myTable tr:nth-child(odd){background-color: #ff9966;}
+
+#myTable tr:hover {background-color: #ddd;}
+
+#myTable th {
+  padding-top: .1%;
+  padding-bottom: .1%;
+  text-align: left;
+  background-color: #ffffcc;
+  color: black;
+}
+  
+#myTable td {
+  padding-top: .1%;
+  padding-bottom: .1%;
+  text-align: left;
+  background-color: #ffffcc;
+  color: black;
+}
