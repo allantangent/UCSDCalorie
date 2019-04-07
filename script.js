@@ -68,8 +68,8 @@ var lcafev13 = { name: 'California Burrito', calories: '943', cost: '$6.95' }
 var lcafev14 = { name: 'Carne Asada Fries', calories: '738', cost: '$6.95' }
 var lcafev15 = { name: 'Vegetable Potsticker', calories: '89', cost: '$1.00' }
 var lcafev16 = { name: 'Vegetable Springroll', calories: '61', cost: '$1.00' }
-var food10 = { name: 'Cheeseburger', calories: '579', cost: '$4.95' }
-var food20 = { name: 'Chicken Breast Sandwich', calories: '431', cost: '$5.25' }
+var food10a = { name: 'Cheeseburger', calories: '579', cost: '$4.95' }
+var food20a = { name: 'Chicken Breast Sandwich', calories: '431', cost: '$5.25' }
 var food30 = { name: 'Chipotle Black Bean Burger ', calories: '465', cost: '$5.95' }
 var food40 = { name: 'Chixin Vegan Berger', calories: '736', cost: '$5.95' }
 var food50 = { name: 'Double Cheeseburger', calories: '885', cost: '$7.75' }
@@ -170,7 +170,7 @@ var ovt43 = { name: 'Spicy Curry Cabbage & Potatoes', calories: '154', cost: '$2
 
 var countries = []
 
-function pickDiningHall() { 
+function pickDiningHall() {
   let diningHall = document.title
   if( diningHall.localeCompare( 'Canyon Vista' ) == 0 ) {
     countries = []
@@ -183,7 +183,7 @@ function pickDiningHall() {
   } else if( diningHall.localeCompare( 'Oceanview' ) == 0 ) {
     countries = [ ovt1, ovt2, ovt3, ovt4, ovt5, ovt6, ovt7, ovt8, ovt9, ovt10, ovt11, ovt12, ovt13, ovt14, ovt15, ovt16, ovt17, ovt18, ovt19, ovt20, ovt21, ovt22, ovt23, ovt24, ovt25, ovt26, ovt27, ovt28, ovt29, ovt30, ovt31, ovt32, ovt33, ovt34, ovt35, ovt36, ovt37, ovt38, ovt39, ovt40, ovt41, ovt42, ovt43 ]
   } else if( diningHall.localeCompare( 'Cafe Ventanas' ) == 0 ) {
-    countries = [ lcafev1, lcafev2, lcafev3, lcafev4, lcafev5, lcafev6, lcafev7, lcafev8, lcafev9, lcafev10, lcafev12, lcafev11, lcafev13, lcafev14, lcafev15, lcafev16 ]
+    countries = [ lcafev1, lcafev2, lcafev3, lcafev4, lcafev5, lcafev6, lcafev7, lcafev8, lcafev9, lcafev10, lcafev12, lcafev11, lcafev13, lcafev14, lcafev15, lcafev16, food10a, food20a, food30, food40, food50, food60, food70, food80, food90, food100, food110, food120, food130, food140, food150, food160, food170 ]
   } else if( diningHall.localeCompare( 'Foodworx' ) == 0 ) {
     countries = [ worx1, worx2, worx3, worx4, worx5, worx6, worx7, worx8, worx9, worx10, worx11, worx12, worx13, worx14, worx15, worx16, worx17, worx18, worx19, worx20, worx21, worx22, worx23, worx24, worx25, worx26, worx27 ]
   } else if( diningHall.localeCompare( 'Roots' ) == 0 ) {
