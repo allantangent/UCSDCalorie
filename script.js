@@ -310,8 +310,10 @@ function autocomplete(inp, arr) {
         displayName = countries[ i ].name
         displayCalories = countries[ i ].calories
         displayCost = countries[ i ].cost
-        totalCalories += displayCalories
-        totalCost += displayCost.slice( 1 )
+        let numCalories = parseInt( displayCalories )
+        let numCost = parseInt( displayCost.slice( 1 ) )
+        totalCalories += numCalories
+        totalCost += numCost
       }
     }
     cell1.innerHTML = displayName;
