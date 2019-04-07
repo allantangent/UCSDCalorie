@@ -43,8 +43,8 @@
 <table cellpadding="0">
 <tr>
 <td>
-<a href = "https://ucsdcalorie.com"  class = "icons">
-<img style="display:block;width:100%;height:auto;"src = "res/menu.png" alt = "Menu"border = "0">
+<a class = "icons">
+<img style="display:block;width:100%;height:auto;"src = "res/menu.png" alt = "Menu"border = "0" onclick = "goBack()">
 </a> 
 <td>
 <a class = "icons">
@@ -54,6 +54,11 @@
 </td>
 </tr>
 </table>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
 <br>
 <form autocomplete="off" action="/action_page.php">
   <div class="autocomplete" style="width:calc( 97vw - 5px);">
