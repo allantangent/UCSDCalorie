@@ -1,3 +1,7 @@
+var food1 = { name: 'Cheeseburger', calories: '500', cost: '$69.69' }
+var food2 = { name: 'Quylan', calories: '500', cost: '$69.69' }
+var countries = [ food1, food2]
+
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -23,14 +27,14 @@ function autocomplete(inp, arr) {
       /*for each item in the array...*/
       for (i = 0; i < arr.length; i++) {
         /*check if the item starts with the same letters as the text field value:*/
-        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+        if (arr[i].name.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
           /*create a DIV element for each matching element:*/
           b = document.createElement("DIV");
           /*make the matching letters bold:*/
-          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-          b.innerHTML += arr[i].substr(val.length);
+          b.innerHTML = "<strong>" + arr[i].name.substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].name.substr(val.length);
           /*insert a input field that will hold the current array item's value:*/
-          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          b.innerHTML += "<input type='hidden' value='" + arr[i].name + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
           b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
@@ -108,12 +112,21 @@ function autocomplete(inp, arr) {
     var row = table.insertRow(0);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
-    cell1.innerHTML = name;
-    cell2.innerHTML = "Cost: $69.69";
+    var cell3 = row.insertCell( 2 )
+    var displayName, displayCalories, displayCost;
+    for( let i = 0; i < countries.length; i++ ) {
+      if( name.localeCompare( countries[ i ].name ) == 0 ){
+        displayName = countries[ i ].name
+        displayCalories = countries[ i ].calories
+        displayCost = countries[ i ].cost
+      }
+    }
+    cell1.innerHTML = displayName;
+    cell2.innerHTML = "Cost: " + displayCost;
+    cell3.innerHTML = "Calories: " + displayCalories
   }
 }
 
-var countries = [ 'Cheeseburger', 'Chicken Breast Sandwich', 'Chipotle Black Bean Burger', 'Chixin Vegan Berger' ]
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
