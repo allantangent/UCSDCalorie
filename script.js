@@ -312,7 +312,7 @@ function autocomplete(inp, arr) {
         displayCost = countries[ i ].cost
         totalCalories += displayCalories
         let dollarIndex = displayCost.indexOf( '$' )
-        let isoCost = displayCost.splice( dollarIndex )
+        let isoCost = displayCost.slice( dollarIndex )
         totalCost += isoCost
       }
     }
