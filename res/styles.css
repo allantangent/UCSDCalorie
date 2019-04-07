@@ -1,0 +1,19 @@
+body {
+	background-color: white;
+	font-family: Indie Flower, cursive;
+}
+table {
+		width: calc( 100vw - 15px);
+		margin-left: auto;
+		margin-right: auto;
+		border = 100px;
+		border-spacing: "0";
+		border-color: "blue";
+		
+}
+img {
+	align: center;
+	max-width=100%;
+	height: auto;
+	width: auto\9;
+}
