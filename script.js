@@ -320,7 +320,7 @@ function autocomplete(inp, arr) {
     cell2.innerHTML = displayCalories;
     cell3.innerHTML = displayCost
     table.rows[ table.rows.length - 1 ].cells[ 1 ].innerHTML = totalCalories
-    table.rows[ table.rows.length - 1 ].cells[ 2 ].innerHTML = totalCost
+    table.rows[ table.rows.length - 1 ].cells[ 2 ].innerHTML = '$' + totalCost.toFixed( 2 )
   }
 }
 
