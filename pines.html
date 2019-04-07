@@ -16,27 +16,32 @@
   padding: .1%;
 }
 
-#myTable tr:nth-child(even){background-color: #ff9966;}
-#myTable tr:nth-child(odd){background-color: #ff9966;}
-
-#myTable tr:hover {background-color: #ddd;}
-
 #myTable th {
   padding-top: .1%;
   padding-bottom: .1%;
   text-align: left;
-  background-color: #ffffcc;
+  background-color: #D7D0CD;
   color: black;
 }
+
+#myTable td {
+  padding-top: .1%;
+  padding-bottom: .1%;
+  text-align: left;
+  background-color: #E1DAD7;
+  color: black;
+}
+#myTable tr:hover td {background-color: white}
+
 </style>
 </head>
 <body id = "test" style = "background-color:#6fba4f">
 <table cellpadding="0">
 <tr>
 <td>
-<a class = "icons">
-  <img style="display:block;width:100%;height:auto;" src = "res/menu.png" alt = "Menu" border = "0" onclick = "goBack()">
-</a> 
+  <a class = "icons">
+  <img style="display:block;width:100%;height:auto;"src = "res/menu.png" alt = "Menu"border = "0" onclick = "goBack()">
+  </a>
 <td>
 <a class = "icons">
 <img style="display:block;width:100%; height:auto;" src = "res/pinestitle.png" alt = "Pines" border = "0">
@@ -48,7 +53,7 @@
 <script>
   function goBack() {
     history.go( -1 )
-  navigator.app.backHistory
+ navigator.app.backHistory
   }
 </script>
 <br>
