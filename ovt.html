@@ -5,6 +5,30 @@
 <title>Oceanview</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+#myTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 98%;
+}
+
+#myTable td, #myTable th {
+  padding: .1%;
+}
+
+#myTable tr:nth-child(even){background-color: #ff9966;}
+#myTable tr:nth-child(odd){background-color: #ff9966;}
+
+#myTable tr:hover {background-color: #ddd;}
+
+#myTable th {
+  padding-top: .1%;
+  padding-bottom: .1%;
+  text-align: left;
+  background-color: #ffffcc;
+  color: black;
+}
+</style>
 </head>
 <body id = "test" style = "background-color:#78b1e0">
 <table cellpadding="0">
@@ -27,6 +51,20 @@
     <input id="myInput" type="text" name="Food" placeholder="Food item...">
   </div>
   <script src="script.js"></script>
+    <br>
+<br>
+  <table  id="myTable" width="95%">
+  	<tr>
+  		<th style="font-size:125%"><b>Name</b></th>
+  		<th style="font-size:125%"><b>Calories</b></th>
+  		<th style="font-size:125%"><b>Cost</b></th>
+  	</tr>
+  	<tr>
+  		<th style="font-size:125%"><b>Total</b></th>
+  		<th></th>
+  		<th></th>
+  	</tr>
+  </table>
 </form>
 </body>
 </html>

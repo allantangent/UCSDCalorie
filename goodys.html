@@ -3,6 +3,30 @@
 <html>
 <head>
 <title>Goodys</title>
+<style>
+#myTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 98%;
+}
+
+#myTable td, #myTable th {
+  padding: .1%;
+}
+
+#myTable tr:nth-child(even){background-color: #ff9966;}
+#myTable tr:nth-child(odd){background-color: #ff9966;}
+
+#myTable tr:hover {background-color: #ddd;}
+
+#myTable th {
+  padding-top: .1%;
+  padding-bottom: .1%;
+  text-align: left;
+  background-color: #ffffcc;
+  color: black;
+}
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -28,12 +52,19 @@
   </div>
   <script src="script.js"></script>
 </form>
-  <table id="myTable">
-    <tr>
-      <th>Food</th>
-      <th>Calories</th>
-      <th>Cost</th>
-    </tr>
+<br>
+<br>
+  <table  id="myTable" width="95%">
+  	<tr>
+  		<th style="font-size:125%"><b>Name</b></th>
+  		<th style="font-size:125%"><b>Calories</b></th>
+  		<th style="font-size:125%"><b>Cost</b></th>
+  	</tr>
+  	<tr>
+  		<th style="font-size:125%"><b>Total</b></th>
+  		<th></th>
+  		<th></th>
+  	</tr>
   </table>
 </body>
 </html>
