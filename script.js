@@ -2,6 +2,11 @@ function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
+
+  /*execute a function when someone clicks on the text field:*/
+  inp.addEventListener( "focus", function( e ) {
+    inp.value = ''
+  })
   /*execute a function when someone writes in the text field:*/
   inp.addEventListener("input", function(e) {
       var a, b, i, val = this.value;
@@ -33,6 +38,8 @@ function autocomplete(inp, arr) {
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
+              console.log( "click!!!" )
+              addToTable( inp.value );
           });
           a.appendChild(b);
         }
@@ -59,7 +66,9 @@ function autocomplete(inp, arr) {
         e.preventDefault();
         if (currentFocus > -1) {
           /*and simulate a click on the "active" item:*/
-          if (x) x[currentFocus].click();
+          if (x) {
+            x[currentFocus].click();
+          }
         }
       }
   });
@@ -93,9 +102,18 @@ function autocomplete(inp, arr) {
   document.addEventListener("click", function (e) {
       closeAllLists(e.target);
   });
+
+  function addToTable( name ) {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = name;
+    cell2.innerHTML = "Cost: $69.69";
+  }
 }
 
-/*An array containing all the country names in the world:*/
-var countries = ["BOOBS","PUSSY"];
+var countries = [ 'Cheeseburger', 'Chicken Breast Sandwich', 'Chipotle Black Bean Burger', 'Chixin Vegan Berger' ]
+
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
