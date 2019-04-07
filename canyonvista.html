@@ -6,8 +6,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-<h1 style = "text-align:center;">Canyon Vista</h1>
+<body class = "canyonvista">
+ <button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script> 
+<br>
+<table cellpadding="0">
+<tr>
+<td>
+<img style="display:block;width:100%; height:auto; align = center;" src = "res/canyonvistatitle.png" alt = "Canyon Vista" border = "0">
+</td>
+</tr>
+</table>
+<br>
 <form autocomplete="off" action="/action_page.php">
   <div class="autocomplete" style="width:300px;">
     <input id="myInput" type="text" name="Food" placeholder="Food item...">
