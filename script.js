@@ -317,8 +317,8 @@ function autocomplete(inp, arr) {
     cell1.innerHTML = displayName;
     cell2.innerHTML = displayCalories;
     cell3.innerHTML = displayCost
-    table.rows[ table.rows.length - 1 ].cells[ 1 ] = totalCalories
-    table.rows[ table.rows.length - 1 ].cells[ 2 ] = totalCost
+    table.rows[ table.rows.length - 1 ].cells[ 1 ].innterHTML = totalCalories
+    table.rows[ table.rows.length - 1 ].cells[ 2 ].innerHTML = totalCost
   }
 }
 
